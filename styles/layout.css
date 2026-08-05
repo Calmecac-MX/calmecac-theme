@@ -1,0 +1,31 @@
+:root {
+  --slidev-theme-primary: #00B09B;
+}
+
+.slidev-layout.cover,
+.slidev-layout.intro {
+  height: 100%;
+  display: grid;
+}
+
+.slidev-layout.cover h1,
+.slidev-layout.intro h1 {
+  font-size: 3.75rem;
+  line-height: 5rem;
+}
+
+.slidev-layout.cover h1 + p,
+.slidev-layout.intro h1 + p {
+  margin-top: -0.5rem;
+  opacity: 0.5;
+  margin-bottom: 1rem;
+}
+
+.slidev-layout.cover p + h2,
+.slidev-layout.cover ul + h2,
+.slidev-layout.cover table + h2,
+.slidev-layout.intro p + h2,
+.slidev-layout.intro ul + h2,
+.slidev-layout.intro table + h2 {
+  margin-top: 2.5rem;
+}
