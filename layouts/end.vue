@@ -31,9 +31,14 @@
       <CalmecacGreca height="20" color="turquoise" class="max-w-md" />
 
       <div v-if="$frontmatter.cta" class="mt-6">
-        <span class="inline-block px-6 py-3 bg-calmecac-turquoise text-calmecac-black font-condensed font-900 text-sm uppercase tracking-widest hover:bg-calmecac-fg hover:text-calmecac-bg transition-colors cursor-pointer">
+        <a 
+          :href="$frontmatter.ctaUrl || $frontmatter.url || 'https://aplica.calmecac.lat'"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="inline-block px-6 py-3 bg-calmecac-turquoise text-calmecac-black font-condensed font-900 text-sm uppercase tracking-widest hover:bg-calmecac-gold hover:text-calmecac-black transition-all shadow-[0_0_15px_rgba(0,176,155,0.4)] no-underline rounded-xs cursor-pointer"
+        >
           {{ $frontmatter.cta }}
-        </span>
+        </a>
       </div>
     </div>
 
