@@ -1,14 +1,14 @@
 <template>
-  <div class="slidev-layout benefits relative flex flex-col justify-between h-full p-10">
+  <div class="slidev-layout benefits relative flex flex-col justify-between h-full p-8 md:p-10 overflow-hidden">
     <CalmecacBackground />
 
     <!-- Header -->
     <CalmecacHeader v-if="$frontmatter.header !== false && !$frontmatter.hideHeader" :title="$frontmatter.headerTitle || $frontmatter.title" :tagline="$frontmatter.tagline || $frontmatter.headerTagline" :badge="$frontmatter.badge" />
 
     <!-- Main Content -->
-    <main class="flex-1 flex flex-col justify-center overflow-y-auto relative z-10 my-auto">
-      <div v-if="$frontmatter.subtitle" class="mb-4">
-        <h2 class="text-xl font-condensed uppercase tracking-wider text-calmecac-heading border-b-2 border-calmecac-turquoise pb-1 mb-2 inline-block">
+    <main class="flex-1 flex flex-col justify-center relative z-10 my-auto overflow-hidden">
+      <div v-if="$frontmatter.subtitle" class="mb-3 shrink-0">
+        <h2 class="text-base md:text-lg font-condensed uppercase tracking-wider text-calmecac-heading border-b-2 border-calmecac-turquoise pb-1 mb-1 inline-block">
           {{ $frontmatter.subtitle }}
         </h2>
       </div>
