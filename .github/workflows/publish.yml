@@ -36,4 +36,4 @@ jobs:
           npm config set //://github.com
           npm publish --registry=https://github.com
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
