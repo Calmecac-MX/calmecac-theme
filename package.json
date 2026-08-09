@@ -1,9 +1,22 @@
 {
   "name": "slidev-theme-calmecac",
-  "version": "2.1.0",
+  "version": "2.1.1",
   "description": "Official CALMÉCAC Brand Theme for Slidev",
-  "author": "Rífatela",
+  "keywords": [
+    "slidev-theme",
+    "slidev",
+    "calmecac"
+  ],
+  "homepage": "https://github.com/cesar-ayar/calmecac-theme#readme",
+  "bugs": {
+    "url": "https://github.com/cesar-ayar/calmecac-theme/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cesar-ayar/calmecac-theme.git"
+  },
   "license": "Apache-2.0",
+  "author": "Rífatela",
   "type": "module",
   "main": "layouts/default.vue",
   "files": [
@@ -16,17 +29,6 @@
     "uno.config.ts",
     "LICENSE"
   ],
-  "keywords": [
-    "slidev-theme",
-    "slidev",
-    "calmecac"
-  ],
-  "publishConfig": {
-    "registry": "https://pkg.rifatela.digital/"
-  },
-  "engines": {
-    "node": ">=20.12.0"
-  },
   "scripts": {
     "build": "slidev build example.md",
     "dev": "slidev example.md --open",
@@ -39,6 +41,12 @@
   },
   "devDependencies": {
     "@slidev/cli": "^52.18.1"
+  },
+  "engines": {
+    "node": ">=20.12.0"
+  },
+  "publishConfig": {
+    "registry": "https://pkg.rifatela.digital/"
   },
   "slidev": {
     "colorSchema": "both",
