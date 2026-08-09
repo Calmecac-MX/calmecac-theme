@@ -19,8 +19,8 @@ jobs:
       - name: Configurar Node.js
         uses: actions/setup-node@v7
         with:
-          registry-url: 'https://registry.npmjs.org'
           node-version: '24'
+          registry-url: 'https://registry.npmjs.org'
 
       - name: Instalar dependencias
         run: npm install
@@ -34,7 +34,7 @@ jobs:
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
 
-      # Publicación en GitHub Packages
+      # Publicación opcional en GitHub Packages
       - name: Publicar en GitHub Packages
         continue-on-error: true
         run: |
