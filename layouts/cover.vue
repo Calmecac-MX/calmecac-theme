@@ -1,10 +1,10 @@
 <template>
   <div class="slidev-layout cover relative flex flex-col justify-between h-full p-12 overflow-hidden text-calmecac-fg">
-    <!-- Calmécac Vector Background Pattern - Portada con la paleta Turquesa / Negro Monolítico -->
+    <!-- Calmécac Vector Background Pattern - Adaptable dinámicamente al tema claro / oscuro -->
     <CalmecacBackground 
       :bg-pattern="true" 
-      :bg-color="$frontmatter.bgColor || '#09090B'" 
-      :pattern-color="$frontmatter.patternColor || '#00B09B'" 
+      :bg-color="$frontmatter.bgColor" 
+      :pattern-color="$frontmatter.patternColor" 
       :opacity="$frontmatter.patternOpacity || 0.75" 
       :alternate-odd="false" 
     />
@@ -29,11 +29,11 @@
         {{ $frontmatter.tagline }}
       </div>
 
-      <h1 class="text-5xl lg:text-7xl font-900 tracking-tight leading-none mb-4 text-calmecac-heading drop-shadow-[0_2px_10px_rgba(0,0,0,0.9)]">
+      <h1 class="text-5xl lg:text-7xl font-900 tracking-tight leading-none mb-4 text-calmecac-heading">
         <slot />
       </h1>
 
-      <p v-if="$frontmatter.description" class="text-xl text-calmecac-gray font-light max-w-2xl leading-relaxed mb-6 drop-shadow-[0_1px_4px_rgba(0,0,0,0.8)]">
+      <p v-if="$frontmatter.description" class="text-xl text-calmecac-gray font-light max-w-2xl leading-relaxed mb-6">
         {{ $frontmatter.description }}
       </p>
 

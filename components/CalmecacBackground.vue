@@ -176,8 +176,8 @@ const computedBgColor = computed(() => {
     return '#00B09B'
   }
 
-  // Páginas pares: Negro Monolítico de fondo
-  return '#09090B'
+  // Fondo dinámico según el tema (Modo Oscuro / Claro)
+  return 'var(--calmecac-bg)'
 })
 
 // Dynamic Pattern Path Color (Área negra del SVG original)
