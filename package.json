@@ -1,6 +1,5 @@
-{
-  "name": "@calmecac/slidev-theme-calmecac",
-  "version": "2.1.2",
+  "name": "slidev-theme-calmecac",
+  "version": "1.1.0",
   "description": "Official CALMÉCAC Brand Theme for Slidev",
   "keywords": [
     "slidev-theme",
@@ -46,7 +45,8 @@
     "node": ">=20.12.0"
   },
   "publishConfig": {
-    "registry": "https://pkg.rifatela.digital/"
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
   },
   "slidev": {
     "colorSchema": "both",
