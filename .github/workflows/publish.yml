@@ -8,6 +8,7 @@ on:
 
 jobs:
   publish:
+    name: Publicar Tema Slidev
     runs-on: ubuntu-latest
     permissions:
       contents: read
@@ -25,14 +26,18 @@ jobs:
       - name: Instalar dependencias
         run: npm ci
 
-      # Paso 1: Publicar en el registro oficial de npm
-      - name: Publicar en npm
-        run: npm publish --access public --registry=https://registry.npmjs.org/
+      - name: Compilar y validar el tema
+        run: npm run build
+
+      # Publicación en npmjs.org
+      - name: Publicar en npm (npmjs.org)
+        run: npm publish --access public
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
 
-      # Paso 2: Publicar en GitHub Packages
+      # Publicación opcional en GitHub Packages (si el paquete es scoped o se usa GITHUB_TOKEN)
       - name: Publicar en GitHub Packages
+        continue-on-error: true
         run: |
           npm config set //npm.pkg.github.com/:_authToken=${{ secrets.GITHUB_TOKEN }}
           npm publish --registry=https://npm.pkg.github.com/
