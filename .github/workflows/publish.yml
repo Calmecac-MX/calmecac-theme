@@ -42,8 +42,4 @@ jobs:
           npm config set //npm.pkg.github.com/:_authToken=${{ secrets.GITHUB_TOKEN }}
           npm publish --registry=https://npm.pkg.github.com/
         env:
-<<<<<<< HEAD
           GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
-=======
-          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
->>>>>>> 50ba5f2 (chore: update publish workflow to trigger on push and optimize registry authentication)
