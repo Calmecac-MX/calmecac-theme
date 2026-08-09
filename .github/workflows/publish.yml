@@ -1,0 +1,39 @@
+name: Publicar Paquete
+
+on:
+  release:
+    types: [created]
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      packages: write
+    steps:
+      - name: Descargar código
+        uses: actions/checkout@v4
+
+      - name: Configurar Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Instalar dependencias
+        run: npm ci
+
+      # Paso 1: Publicar en el registro oficial de npm
+      - name: Publicar en npm
+        run: |
+          npm config set //registry.npmjs.org/:_authToken=$NPM_TOKEN
+          npm publish --registry=https://npmjs.org
+        env:
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+
+      # Paso 2: Publicar en GitHub Packages
+      - name: Publicar en GitHub Packages
+        run: |
+          npm config set //://github.com
+          npm publish --registry=https://github.com
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
