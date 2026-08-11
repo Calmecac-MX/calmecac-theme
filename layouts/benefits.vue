@@ -1,5 +1,5 @@
 <template>
-  <div class="slidev-layout benefits relative flex flex-col justify-between h-full p-8 md:p-10 overflow-hidden">
+  <div class="slidev-layout benefits relative flex flex-col justify-between h-full px-8 py-5 md:px-10 md:py-6 overflow-hidden">
     <CalmecacBackground />
 
     <!-- Header -->
@@ -7,8 +7,8 @@
 
     <!-- Main Content -->
     <main class="flex-1 flex flex-col justify-center relative z-10 my-auto overflow-hidden">
-      <div v-if="$frontmatter.subtitle" class="mb-3 shrink-0">
-        <h2 class="text-base md:text-lg font-condensed uppercase tracking-wider text-calmecac-heading border-b-2 border-calmecac-turquoise pb-1 mb-1 inline-block">
+      <div v-if="$frontmatter.subtitle" class="mb-2 shrink-0">
+        <h2 class="text-sm md:text-base font-condensed uppercase tracking-wider text-calmecac-heading border-b-2 border-calmecac-turquoise pb-0.5 mb-1 inline-block">
           {{ $frontmatter.subtitle }}
         </h2>
       </div>

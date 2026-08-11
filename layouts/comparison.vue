@@ -1,18 +1,18 @@
 <template>
-  <div class="slidev-layout comparison relative flex flex-col justify-between h-full p-10">
+  <div class="slidev-layout comparison relative flex flex-col justify-between h-full px-8 py-5 md:px-10 md:py-6 overflow-hidden">
     <CalmecacBackground />
 
     <!-- Header -->
     <CalmecacHeader v-if="$frontmatter.header !== false && !$frontmatter.hideHeader" :title="$frontmatter.headerTitle || $frontmatter.title" :tagline="$frontmatter.tagline || $frontmatter.headerTagline" :badge="$frontmatter.badge" />
 
     <!-- Main Content -->
-    <main class="flex-1 grid grid-cols-1 md:grid-cols-2 gap-8 items-stretch overflow-y-auto relative z-10 my-auto">
-      <div class="col-before flex flex-col justify-center">
+    <main class="flex-1 grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-6 items-stretch relative z-10 my-auto overflow-hidden">
+      <div class="col-before flex flex-col justify-center h-full overflow-hidden">
         <slot name="before">
           <slot />
         </slot>
       </div>
-      <div class="col-after flex flex-col justify-center">
+      <div class="col-after flex flex-col justify-center h-full overflow-hidden">
         <slot name="after">
           <slot name="right" />
         </slot>
