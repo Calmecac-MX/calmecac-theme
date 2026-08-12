@@ -51,13 +51,3 @@ jobs:
         run: npm publish --access public
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
-
-      # Publicación opcional en GitHub Packages
-      - name: Publicar en GitHub Packages
-        continue-on-error: true
-        run: |
-          npm config set //npm.pkg.github.com/:_authToken=${{ secrets.GH_TOKEN }}
-          npm publish --registry=https://npm.pkg.github.com/
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.GH_TOKEN }}
-

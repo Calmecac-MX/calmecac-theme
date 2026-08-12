@@ -1,9 +1,9 @@
-# slidev-theme-calmecac
+# @calmecac/slidev-theme-calmecac
 
-[![NPM Version](https://img.shields.io/npm/v/slidev-theme-calmecac?color=00B09B&label=npm)](https://www.npmjs.com/package/slidev-theme-calmecac)
+[![NPM Version](https://img.shields.io/npm/v/@calmecac/slidev-theme-calmecac?color=00B09B&label=npm)](https://www.npmjs.com/package/@calmecac/slidev-theme-calmecac)
 [![License: Apache 2.0](https://img.shields.io/badge/License-Apache_2.0-00B09B.svg)](https://opensource.org/licenses/Apache-2.0)
 
-Tema oficial de **CALMÉCAC** para [Slidev](https://github.com/slidevjs/slidev), diseñado para crear presentaciones monumentales, estructuradas y de alta calidad visual.
+Tema oficial de **CALMÉCAC** en la organización npm `@calmecac` para [Slidev](https://github.com/slidevjs/slidev), diseñado para crear presentaciones monumentales, estructuradas y de alta calidad visual.
 
 ---
 
@@ -39,12 +39,22 @@ calmecac-theme/assets/
 
 ## 📦 Instalación y Uso
 
-### 1. En un proyecto de Slidev existente
+### 1. Instalación desde npm
+
+```bash
+npm install @calmecac/slidev-theme-calmecac
+# o con pnpm
+pnpm add @calmecac/slidev-theme-calmecac
+```
+
+### 2. En tu archivo `slides.md` de Slidev
 Agrega la siguiente propiedad al frontmatter inicial de tu archivo `slides.md`:
 
 ```yaml
 ---
-theme: calmecac
+theme: '@calmecac/calmecac'
+# O de manera directa:
+# theme: '@calmecac/slidev-theme-calmecac'
 headerTitle: MI PROYECTO
 tagline: PRESENTACIÓN MONUMENTAL
 badge: SECCIÓN 01
