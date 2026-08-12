@@ -52,7 +52,9 @@ html.light,
 
 /* Base Slide Styling */
 .slidev-slide-loading,
-.slidev-layout {
+.slidev-layout,
+.slidev-slide-content,
+.slidev-page-initial {
   background-color: var(--calmecac-bg);
   color: var(--calmecac-fg);
   font-family: 'Roboto', sans-serif;
@@ -60,6 +62,14 @@ html.light,
   background-image: radial-gradient(circle at 50% 0%, var(--calmecac-bg-glow) 0%, transparent 65%);
   box-sizing: border-box;
   transition: background-color 0.3s ease, color 0.3s ease;
+  overflow: hidden !important;
+}
+
+/* Hide scrollbars globally */
+::-webkit-scrollbar {
+  display: none !important;
+  width: 0 !important;
+  height: 0 !important;
 }
 
 /* Headings Typography */
@@ -101,7 +111,7 @@ mark,
   background: rgba(255, 184, 0, 0.15);
   color: #FFB800;
   border: 1px solid rgba(255, 184, 0, 0.35);
-  padding: 0.12em 0.4em;
+  padding: 0.05em 0.3em;
   border-radius: 4px;
   font-weight: 700;
   box-shadow: 0 0 10px rgba(255, 184, 0, 0.15);
@@ -172,19 +182,6 @@ pre.shiki {
   border: 1px solid var(--calmecac-border);
   border-radius: 6px;
   box-shadow: var(--calmecac-card-shadow);
-}
-
-/* Custom Scrollbars */
-::-webkit-scrollbar {
-  width: 6px;
-  height: 6px;
-}
-::-webkit-scrollbar-track {
-  background: var(--calmecac-bg);
-}
-::-webkit-scrollbar-thumb {
-  background: var(--calmecac-turquoise);
-  border-radius: 3px;
 }
 
 /* Neon Outline Glow Effects */

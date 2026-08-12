@@ -1,5 +1,5 @@
 <template>
-  <footer class="grid grid-cols-3 items-center border-t border-calmecac-border pt-3 mt-6 text-xs text-calmecac-gray font-condensed shrink-0 relative z-10">
+  <footer class="grid grid-cols-3 items-center border-t border-calmecac-border pt-2 mt-3 text-xs text-calmecac-gray font-condensed shrink-0 relative z-10">
     <div class="flex items-center gap-2">
       <span>Rífatela 2026</span>
     </div>

@@ -1,7 +1,7 @@
 <template>
-  <header class="flex items-center justify-between border-b border-calmecac-border pb-3 mb-6 shrink-0 relative z-10">
+  <header class="flex items-center justify-between border-b border-calmecac-border pb-2 mb-3 shrink-0 relative z-10">
     <div class="flex items-center gap-3.5">
-      <CalmecacSymbol size="40" class="text-calmecac-turquoise shrink-0" />
+      <CalmecacSymbol size="36" class="text-calmecac-turquoise shrink-0" />
       <div class="flex items-center gap-3">
         <span 
           v-if="resolvedTitle" 
@@ -19,7 +19,7 @@
     </div>
     <div class="flex items-center gap-3.5">
       <CalmecacBadge v-if="resolvedBadge" variant="outline" class="shrink-0">{{ resolvedBadge }}</CalmecacBadge>
-      <CalmecacLogo size="32" layout="symbol-only" color="turquoise" class="shrink-0" />
+      <CalmecacLogo size="28" layout="symbol-only" color="turquoise" class="shrink-0" />
     </div>
   </header>
 </template>

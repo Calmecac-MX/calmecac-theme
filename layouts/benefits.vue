@@ -1,18 +1,20 @@
 <template>
-  <div class="slidev-layout benefits relative flex flex-col justify-between h-full px-8 py-5 md:px-10 md:py-6 overflow-hidden">
+  <div class="slidev-layout benefits relative flex flex-col justify-between h-full px-8 py-4 overflow-hidden">
     <CalmecacBackground />
 
     <!-- Header -->
     <CalmecacHeader v-if="$frontmatter.header !== false && !$frontmatter.hideHeader" :title="$frontmatter.headerTitle || $frontmatter.title" :tagline="$frontmatter.tagline || $frontmatter.headerTagline" :badge="$frontmatter.badge" />
 
     <!-- Main Content -->
-    <main class="flex-1 flex flex-col justify-center relative z-10 my-auto overflow-hidden">
+    <main class="flex-1 flex flex-col justify-center relative z-10 overflow-hidden">
       <div v-if="$frontmatter.subtitle" class="mb-2 shrink-0">
-        <h2 class="text-sm md:text-base font-condensed uppercase tracking-wider text-calmecac-heading border-b-2 border-calmecac-turquoise pb-0.5 mb-1 inline-block">
+        <h2 class="text-xs md:text-sm font-condensed uppercase tracking-wider text-calmecac-heading border-b-2 border-calmecac-turquoise pb-0.5 m-0 inline-block">
           {{ $frontmatter.subtitle }}
         </h2>
       </div>
-      <slot />
+      <div class="flex-1 flex flex-col justify-center">
+        <slot />
+      </div>
     </main>
 
     <!-- Footer -->
